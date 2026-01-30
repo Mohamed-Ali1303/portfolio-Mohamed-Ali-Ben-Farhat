@@ -1,0 +1,281 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Mohamed-Ali Ben Farhat • Portfolio</title>
+  <meta name="description" content="Portfolio de Mohamed-Ali Ben Farhat — Systèmes, Réseau, Data. Projets BTS SIO, compétences C1/C7/C11/C17, CV et tableau de synthèse." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Urbanist:wght@300;400;600;700;800;900&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <!-- FX layers -->
+  <canvas id="fx"></canvas>
+  <div class="noise"></div>
+
+  <header class="top">
+    <div class="wrap top__inner">
+      <a class="brand" href="#top" aria-label="Retour en haut">
+        <span class="brand__mark"></span>
+        <span class="brand__text">MABF</span>
+      </a>
+
+      <nav class="nav" aria-label="Navigation">
+        <a href="#about" class="nav__link">Profil</a>
+        <a href="#skills" class="nav__link">Compétences</a>
+        <a href="#projects" class="nav__link">Projets</a>
+        <a href="#contact" class="nav__cta">Contact</a>
+      </nav>
+
+      <button class="hamb" id="hamb" aria-label="Menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+
+    <div class="drawer" id="drawer" aria-hidden="true">
+      <a href="#about">Profil</a>
+      <a href="#skills">Compétences</a>
+      <a href="#projects">Projets</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </header>
+
+  <main id="top">
+    <!-- HERO -->
+    <section class="hero">
+      <div class="wrap hero__grid">
+        <div class="hero__left reveal">
+          <div class="status">
+            <span class="status__dot"></span>
+            Dispo alternance <b>Septembre 2025</b>
+            <span class="sep"></span>
+            <span class="muted">Systèmes • Réseau • Data</span>
+          </div>
+
+          <h1 class="h1">
+            Mohamed-Ali <span>Ben Farhat</span>
+          </h1>
+
+          <p class="lead">
+            Je construis des solutions qui tiennent en prod :
+            <b>support</b>, <b>infra</b>, <b>services</b>, <b>sécurité web</b> et <b>reporting</b>.
+          </p>
+
+          <div class="ctaRow">
+            <a class="btn btn--primary" href="#projects">
+              <span class="btn__glow"></span>
+              Voir mes projets
+            </a>
+            <a class="btn btn--ghost" href="#skills">Compétences BTS</a>
+          </div>
+
+          <div class="dlGrid">
+            <a class="dlCard" href="CV-Mohamed-Ali-Ben-Farhat.pdf" download>
+              <div class="dlCard__icon">⬇</div>
+              <div class="dlCard__text">
+                <div class="dlCard__title">Télécharger mon CV</div>
+                <div class="dlCard__meta">PDF</div>
+              </div>
+              <div class="dlCard__spark"></div>
+            </a>
+
+            <a class="dlCard" href="TableauSynthese.xlsx" download>
+              <div class="dlCard__icon">⬇</div>
+              <div class="dlCard__text">
+                <div class="dlCard__title">Télécharger Tableau de synthèse</div>
+                <div class="dlCard__meta">Excel</div>
+              </div>
+              <div class="dlCard__spark"></div>
+            </a>
+          </div>
+
+          <div class="chips">
+            <a class="chip" href="mailto:mohamed.benfarh7@gmail.com">mohamed.benfarh7@gmail.com</a>
+            <a class="chip" target="_blank" rel="noreferrer" href="https://www.linkedin.com/in/mohamed-ali-ben-farhat-61bab4363/">LinkedIn</a>
+            <a class="chip" target="_blank" rel="noreferrer" href="https://github.com/Mohamed-Ali1303">GitHub</a>
+          </div>
+        </div>
+
+        <aside class="hero__right reveal">
+          <div class="card tilt" data-tilt>
+            <div class="card__shine"></div>
+            <div class="profileTop">
+              <img src="profile.jpg" alt="Photo de Mohamed-Ali Ben Farhat" class="avatar">
+              <div>
+                <div class="name">Mohamed-Ali Ben Farhat</div>
+                <div class="role">Alternant • Systèmes/Réseau • Data</div>
+              </div>
+            </div>
+
+            <div class="facts">
+              <div class="fact"><span>Localisation</span><b>Sarcelles, France</b></div>
+              <div class="fact"><span>Téléphone</span><b>+33 6 99 52 07 26</b></div>
+              <div class="fact"><span>Langues</span><b>FR • EN (C1) • ES (B1)</b></div>
+            </div>
+
+            <div class="ticker">
+              <div class="ticker__label">Focus</div>
+              <div class="ticker__value" id="ticker"></div>
+            </div>
+          </div>
+
+          <div class="miniRow">
+            <div class="mini reveal">
+              <div class="mini__k">Stack</div>
+              <div class="mini__v">Python • SQL • Power BI • Linux/VM • Web</div>
+            </div>
+            <div class="mini reveal">
+              <div class="mini__k">Style</div>
+              <div class="mini__v">Docs claires • tickets clean • déploiements carrés</div>
+            </div>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about" class="section">
+      <div class="wrap">
+        <div class="head reveal">
+          <h2>Profil</h2>
+          <p>
+            Alternant orienté <b>infra / réseau</b> avec une approche <b>data & reporting</b>.
+            Je sais diagnostiquer, documenter, déployer et sécuriser.
+          </p>
+        </div>
+
+        <div class="grid2">
+          <div class="pane reveal tilt" data-tilt>
+            <h3>Expériences</h3>
+            <ul>
+              <li><b>Technicien Fibre Optique</b> — RT CONNECT (Juil–Août 2025)</li>
+              <li><b>Assistant RH</b> — RT CONNECT (Juil–Août 2025)</li>
+            </ul>
+          </div>
+
+          <div class="pane reveal tilt" data-tilt>
+            <h3>Formations</h3>
+            <ul>
+              <li><b>BTS SIO</b> — EFREI, Villejuif (2025–2027)</li>
+              <li><b>Bac STI2D (SIN)</b> — Maryse Condé, Sarcelles (2022–2025)</li>
+              <li><b>Technicien Fibre Optique</b> (Été 2025)</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SKILLS HUB -->
+    <section id="skills" class="section">
+      <div class="wrap">
+        <div class="head reveal">
+          <h2>Compétences BTS SIO</h2>
+          <p>
+            Clique sur une compétence : page dédiée avec description + ce que tu as réalisé.
+          </p>
+        </div>
+
+        <div class="grid4">
+          <a class="skillCard reveal tilt" data-tilt href="competences/c1.html">
+            <div class="skillCard__code">C1</div>
+            <div class="skillCard__title">Ressources numériques</div>
+            <div class="skillCard__desc">Inventaire, identification, traçabilité.</div>
+            <div class="skillCard__tag">GLPI / parc / VM</div>
+          </a>
+
+          <a class="skillCard reveal tilt" data-tilt href="competences/c7.html">
+            <div class="skillCard__code">C7</div>
+            <div class="skillCard__title">Demandes & incidents</div>
+            <div class="skillCard__desc">Collecter, suivre, orienter, prioriser.</div>
+            <div class="skillCard__tag">ITSM / tickets</div>
+          </a>
+
+          <a class="skillCard reveal tilt" data-tilt href="competences/c11.html">
+            <div class="skillCard__code">C11</div>
+            <div class="skillCard__title">Visibilité d’un service</div>
+            <div class="skillCard__desc">Référencer, mesurer, optimiser.</div>
+            <div class="skillCard__tag">Analytics / SEO</div>
+          </a>
+
+          <a class="skillCard reveal tilt" data-tilt href="competences/c17.html">
+            <div class="skillCard__code">C17</div>
+            <div class="skillCard__title">Déployer un service</div>
+            <div class="skillCard__desc">Mise en prod, config, tests, doc.</div>
+            <div class="skillCard__tag">Azure / VM / Web</div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section id="projects" class="section">
+      <div class="wrap">
+        <div class="head reveal">
+          <h2>Projets</h2>
+          <p>Support • Infra • Sécurité — orientés résultats.</p>
+        </div>
+
+        <div class="grid3">
+          <article class="proj reveal tilt" data-tilt>
+            <div class="proj__top">
+              <h3>ServiceDesk Sprint</h3>
+              <span class="pill">Support</span>
+            </div>
+            <p>Gestion d’incidents et organisation du support via GLPI + documentation.</p>
+            <div class="tags"><span>GLPI</span><span>ITSM</span><span>Doc</span></div>
+          </article>
+
+          <article class="proj reveal tilt" data-tilt>
+            <div class="proj__top">
+              <h3>InfraWeb Lab</h3>
+              <span class="pill">Infra</span>
+            </div>
+            <p>Auto-hébergement : Apache/PHP/MySQL, SSH, FTP de sauvegarde, Git, VM.</p>
+            <div class="tags"><span>Apache</span><span>PHP</span><span>MySQL</span><span>Git</span></div>
+          </article>
+
+          <article class="proj reveal tilt" data-tilt>
+            <div class="proj__top">
+              <h3>SecureWeb Hardening</h3>
+              <span class="pill">Sécurité</span>
+            </div>
+            <p>Correction de failles (SQLi/XSS/CSRF), mise en place HTTPS/CSP/tokens.</p>
+            <div class="tags"><span>SQLi</span><span>XSS</span><span>CSRF</span><span>HTTPS</span></div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="section end">
+      <div class="wrap">
+        <div class="contact reveal tilt" data-tilt>
+          <div>
+            <h2>Contact</h2>
+            <p class="muted">
+              Une opportunité alternance ? Je réponds vite et je suis carré sur la doc et l’exécution.
+            </p>
+          </div>
+          <div class="contact__actions">
+            <a class="btn btn--primary" href="mailto:mohamed.benfarh7@gmail.com"><span class="btn__glow"></span>Envoyer un email</a>
+            <a class="btn btn--ghost" target="_blank" rel="noreferrer" href="https://www.linkedin.com/in/mohamed-ali-ben-farhat-61bab4363/">LinkedIn</a>
+            <a class="btn btn--ghost" target="_blank" rel="noreferrer" href="https://github.com/Mohamed-Ali1303">GitHub</a>
+          </div>
+        </div>
+
+        <footer class="foot">
+          <span>© <span id="year"></span> Mohamed-Ali Ben Farhat</span>
+          <span class="muted">Built with HTML/CSS/JS • GitHub Pages</span>
+        </footer>
+      </div>
+    </section>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
