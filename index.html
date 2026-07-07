@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Mohamed-Ali Ben Farhat • Portfolio</title>
+<meta name="description" content="Portfolio de Mohamed-Ali Ben Farhat — Systèmes, Réseau, Data. Alternance BTS SIO septembre 2026.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@500;700;800&family=Outfit:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="cursor-ring"></div>
+<div class="cursor-dot"></div>
+<canvas id="net"></canvas>
+<div class="grid-overlay"></div>
+
+<nav>
+  <a class="logo" href="#top"><span>❯</span> MABF<span>_</span></a>
+  <div class="nav-links">
+    <a href="#specialites">Spécialités</a>
+    <a href="#profil">Profil</a>
+    <a href="#competences">Compétences</a>
+    <a href="#projets">Projets</a>
+  </div>
+  <a class="nav-cta" href="#contact">./contact</a>
+</nav>
+
+<main id="top">
+
+<!-- HERO -->
+<section class="hero" style="padding-top:140px">
+  <div>
+    <div class="badge"><span class="pulse"></span> ALTERNANCE BTS SIO SISR · SEPT 2026 · 2J ÉCOLE / 3J ENTREPRISE</div>
+    <h1>Mohamed-Ali<br><span class="grad">Ben Farhat</span></h1>
+    <div class="typed-line"><span class="prompt">root@mabf:~$</span> <span id="typed"></span><span class="caret"></span></div>
+    <p class="sub">Je construis des solutions qui tiennent en prod : <strong>support</strong>, <strong>infrastructure</strong>, <strong>services</strong>, <strong>sécurité web</strong> et <strong>reporting data</strong>. Docs claires, tickets clean, déploiements carrés.</p>
+    <div class="cta-row">
+      <a class="btn btn-primary" href="#projets">Voir mes projets →</a>
+      <a class="btn btn-ghost" href="#competences">Compétences BTS</a>
+    </div>
+    <div class="dl-row">
+      <a href="CV_MABF.pdf" download>CV — PDF</a>
+      <a href="TableauSynthese.xlsx" download>Tableau de synthèse — Excel</a>
+    </div>
+  </div>
+
+  <div class="terminal">
+    <div class="terminal-bar">
+      <span class="dot"></span><span class="dot"></span><span class="dot"></span>
+      <span class="title">mabf@portfolio — zsh</span>
+    </div>
+    <div class="avatar-wrap">
+      <img class="avatar" src="profile.jpg" alt="Photo de Mohamed-Ali Ben Farhat"
+           onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+      <div class="avatar-fallback">MA</div>
+    </div>
+    <div class="terminal-body">
+      <div class="cmd">whoami</div>
+      <div class="out"><b>Alternant</b> · Systèmes / Réseau · Data</div>
+      <div class="cmd">cat infos.txt</div>
+      <div class="out">📍 <b>Sarcelles, France</b></div>
+      <div class="out">📞 <b>+33 6 99 52 07 26</b></div>
+      <div class="out">🌐 FR · EN <b>(C1)</b> · ES <b>(B1)</b></div>
+      <div class="cmd">ls ./stack</div>
+      <div class="out"><b>Python</b>  <b>C/C++</b>  <b>SQL</b>  <b>Power BI</b>  <b>Linux/VM</b>  <b>DNS</b>  <b>Web</b></div>
+    </div>
+  </div>
+</section>
+
+<!-- MARQUEE -->
+<div class="marquee">
+  <div class="marquee-track" id="marquee">
+    <span><b>PYTHON · C/C++</b>langages</span>
+    <span><b>SQL · MYSQL</b>bases de données</span>
+    <span><b>POWER BI</b>dashboards & reporting</span>
+    <span><b>LINUX / VM</b>administration système</span>
+    <span><b>DNS</b>OVH · Hostinger · Cloudflare</span>
+    <span><b>CMS</b>Framer · WordPress</span>
+    <span><b>GLPI · TICKETING</b>ITSM & support</span>
+    <span><b>APACHE · PHP</b>auto-hébergement</span>
+    <span><b>GIT</b>versioning</span>
+    <span><b>HTTPS · CSP</b>sécurité web</span>
+    <span><b>FIBRE OPTIQUE</b>OTDR · photométrie</span>
+  </div>
+</div>
+
+<!-- SPÉCIALITÉS -->
+<section id="specialites">
+  <div class="eyebrow reveal">ls ./specialites</div>
+  <h2 class="reveal">Mes <span style="background:linear-gradient(120deg,var(--cyan),var(--magenta));-webkit-background-clip:text;background-clip:text;color:transparent">spécialités</span></h2>
+  <p class="section-sub reveal">Quatre domaines où je diagnostique, je documente, je déploie et je sécurise.</p>
+  <div class="spec-grid">
+    <div class="card reveal">
+      <div class="spec-icon">🖧</div>
+      <h3>Systèmes & Réseau</h3>
+      <p>Administration Linux, virtualisation, SSH, configuration de services et gestion de parc. Terrain : fibre optique.</p>
+    </div>
+    <div class="card reveal">
+      <div class="spec-icon">📊</div>
+      <h3>Data & Reporting</h3>
+      <p>Python, SQL et Power BI pour transformer des données brutes en dashboards lisibles et décisions rapides.</p>
+    </div>
+    <div class="card reveal">
+      <div class="spec-icon">🛡️</div>
+      <h3>Sécurité Web</h3>
+      <p>Correction de failles SQLi / XSS / CSRF, durcissement HTTPS, CSP et tokens. Le web, mais blindé.</p>
+    </div>
+    <div class="card reveal">
+      <div class="spec-icon">🎫</div>
+      <h3>Support & ITSM</h3>
+      <p>Gestion d'incidents via GLPI, tickets clients de premier niveau, DNS & mise en ligne. Tickets clean, utilisateurs contents.</p>
+    </div>
+  </div>
+</section>
+
+<!-- PROFIL -->
+<section id="profil">
+  <div class="eyebrow reveal">cat ./profil.md</div>
+  <h2 class="reveal">Profil</h2>
+  <p class="section-sub reveal">Alternant orienté <strong style="color:var(--text)">infra / réseau</strong> avec une approche <strong style="color:var(--text)">data & reporting</strong>.</p>
+  <div class="about-grid">
+    <div class="card reveal">
+      <div class="about-label">// EXPÉRIENCES</div>
+      <ul class="timeline">
+        <li>
+          <b>Junior Technical Support Engineer</b><br>
+          <span class="where">OscarAISolutions — Montrouge</span><br>
+          <span class="when">MAI — JUIN 2026</span><br>
+          <span class="where">DNS (OVH, Hostinger, Cloudflare) · sous-domaines CMS (Framer, WordPress) · tickets clients N1 · tests de mise en ligne · doc interne</span>
+        </li>
+        <li>
+          <b>Technicien Fibre Optique</b><br>
+          <span class="where">RT CONNECT</span><br>
+          <span class="when">JUIL — AOÛT 2025</span><br>
+          <span class="where">Installation & raccordement · tests OTDR / photométrie · plans réseau · diagnostic de pannes terrain</span>
+        </li>
+        <li>
+          <b>Assistant RH</b><br>
+          <span class="where">RT CONNECT</span><br>
+          <span class="when">JUIL — AOÛT 2025</span><br>
+          <span class="where">Gestion administrative · bases RH · recrutement & intégration · reporting</span>
+        </li>
+      </ul>
+    </div>
+    <div class="card reveal">
+      <div class="about-label">// FORMATIONS</div>
+      <ul class="timeline">
+        <li>
+          <b>BTS SIO</b><br>
+          <span class="where">EFREI, Villejuif</span><br>
+          <span class="when">2025 — 2027</span>
+        </li>
+        <li>
+          <b>Formation Technicien Fibre Optique</b><br>
+          <span class="when">ÉTÉ 2025</span>
+        </li>
+        <li>
+          <b>Bac STI2D (SIN)</b><br>
+          <span class="where">Maryse Condé, Sarcelles</span><br>
+          <span class="when">2022 — 2025</span>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <div class="card reveal" style="margin-top:20px">
+    <div class="about-label">// STACK TECHNIQUE & SOFT SKILLS</div>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:26px;margin-top:16px">
+      <div>
+        <p style="font-family:var(--font-mono);font-size:.72rem;color:var(--magenta);margin-bottom:10px">LANGAGES</p>
+        <div class="chips">
+          <span class="chip">Python</span><span class="chip">C/C++</span><span class="chip">HTML</span><span class="chip">SQL</span>
+        </div>
+      </div>
+      <div>
+        <p style="font-family:var(--font-mono);font-size:.72rem;color:var(--magenta);margin-bottom:10px">LOGICIELS & OUTILS</p>
+        <div class="chips">
+          <span class="chip">Power BI</span><span class="chip">MySQL</span><span class="chip">VS Code</span><span class="chip">Arduino</span><span class="chip">SolidWorks / OnShape</span><span class="chip">Pack Office</span><span class="chip">Canva</span><span class="chip">MindView / Gantt</span>
+        </div>
+      </div>
+      <div>
+        <p style="font-family:var(--font-mono);font-size:.72rem;color:var(--magenta);margin-bottom:10px">SOFT SKILLS</p>
+        <div class="chips">
+          <span class="chip">Planification de projet</span><span class="chip">Gestion d'équipe</span><span class="chip">Force de proposition</span><span class="chip">Pilotage de réunion</span>
+        </div>
+      </div>
+      <div>
+        <p style="font-family:var(--font-mono);font-size:.72rem;color:var(--magenta);margin-bottom:10px">LANGUES</p>
+        <div class="chips">
+          <span class="chip">Français (natif)</span><span class="chip">Anglais (C1)</span><span class="chip">Espagnol (B1)</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- COMPÉTENCES -->
+<section id="competences">
+  <div class="eyebrow reveal">ls ./competences-bts</div>
+  <h2 class="reveal">Compétences BTS SIO</h2>
+  <p class="section-sub reveal">Clique sur une compétence pour accéder à sa page dédiée : description + réalisations concrètes.</p>
+  <div class="skills-grid">
+    <a class="card skill reveal" href="competence/c1.html">
+      <span class="arrow">↗</span>
+      <span class="code">C1</span>
+      <h3>Ressources numériques</h3>
+      <p>Inventaire, identification, traçabilité du parc informatique.</p>
+      <div class="tags">GLPI · parc · VM</div>
+    </a>
+    <a class="card skill reveal" href="competence/c7.html">
+      <span class="arrow">↗</span>
+      <span class="code">C7</span>
+      <h3>Demandes & incidents</h3>
+      <p>Collecter, suivre, orienter et prioriser les demandes utilisateurs.</p>
+      <div class="tags">ITSM · tickets</div>
+    </a>
+    <a class="card skill reveal" href="competence/c11.html">
+      <span class="arrow">↗</span>
+      <span class="code">C11</span>
+      <h3>Visibilité d'un service</h3>
+      <p>Référencer, mesurer et optimiser la présence en ligne.</p>
+      <div class="tags">Analytics · SEO</div>
+    </a>
+    <a class="card skill reveal" href="competence/c14.html">
+      <span class="arrow">↗</span>
+      <span class="code">C14</span>
+      <h3>Gestion de projet</h3>
+      <p>Planifier, organiser et suivre un projet de bout en bout.</p>
+      <div class="tags">Trello · Agile</div>
+    </a>
+    <a class="card skill reveal" href="competence/c17.html">
+      <span class="arrow">↗</span>
+      <span class="code">C17</span>
+      <h3>Déployer un service</h3>
+      <p>Mise en production, configuration, tests et documentation.</p>
+      <div class="tags">Azure · VM · Web</div>
+    </a>
+  </div>
+</section>
+
+<!-- PROJETS -->
+<section id="projets">
+  <div class="eyebrow reveal">git log --projects</div>
+  <h2 class="reveal">Projets</h2>
+  <p class="section-sub reveal">Support · Infra · Sécurité — orientés résultats.</p>
+  <div class="proj-grid">
+    <div class="card proj reveal">
+      <div class="cat">⚡ Support</div>
+      <h3>ServiceDesk Sprint</h3>
+      <p>Gestion d'incidents et organisation complète du support via GLPI, avec documentation des procédures.</p>
+      <div class="chips">
+        <span class="chip">GLPI</span><span class="chip">ITSM</span><span class="chip">Doc</span>
+      </div>
+    </div>
+    <div class="card proj reveal">
+      <div class="cat">🖥️ Infra</div>
+      <h3>InfraWeb Lab</h3>
+      <p>Auto-hébergement complet : stack Apache / PHP / MySQL, accès SSH, FTP de sauvegarde, Git, le tout sur VM.</p>
+      <div class="chips">
+        <span class="chip">Apache</span><span class="chip">PHP</span><span class="chip">MySQL</span><span class="chip">Git</span>
+      </div>
+    </div>
+    <div class="card proj reveal">
+      <div class="cat">🔒 Sécurité</div>
+      <h3>SecureWeb Hardening</h3>
+      <p>Audit et correction de failles (SQLi, XSS, CSRF), mise en place de HTTPS, CSP et tokens de session.</p>
+      <div class="chips">
+        <span class="chip">SQLi</span><span class="chip">XSS</span><span class="chip">CSRF</span><span class="chip">HTTPS</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+  <div class="card contact-card reveal">
+    <div class="eyebrow" style="justify-content:center;display:flex">./contact --now</div>
+    <h2>Une opportunité <span style="background:linear-gradient(120deg,var(--cyan),var(--magenta));-webkit-background-clip:text;background-clip:text;color:transparent">d'alternance</span> ?</h2>
+    <p>Je réponds vite, et je suis carré sur la doc comme sur l'exécution. Parlons-en.</p>
+    <div class="contact-links">
+      <a class="btn btn-primary" href="mailto:mohamed.benfarh7@gmail.com">✉ Envoyer un email</a>
+      <a class="btn btn-ghost" href="https://www.linkedin.com/in/mohamed-ali-ben-farhat-61bab4363/" target="_blank" rel="noopener">LinkedIn</a>
+      <a class="btn btn-ghost" href="https://github.com/Mohamed-Ali1303" target="_blank" rel="noopener">GitHub</a>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  © <span id="year"></span> Mohamed-Ali Ben Farhat — <b>uptime 100%</b> · Built with HTML / CSS / JS · GitHub Pages
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
